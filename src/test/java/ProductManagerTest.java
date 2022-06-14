@@ -5,8 +5,8 @@ import ru.netology.*;
 public class ProductManagerTest {
     Book book1 = new Book(11, "Анна Каренина", 500, "Толстой");
     Book book2 = new Book(12, "Мастер и Маргарита", 600, "Булгаков");
-    Book book3 = new Book(13, "Ревизор", 500, "Гоголь");
-    Book book4 = new Book(14, "Братья Карамазовы", 500, "Достоевский");
+    Book book3 = new Book(13, "Ревизор", 450, "Гоголь");
+    Book book4 = new Book(14, "Братья Карамазовы", 550, "Достоевский");
     Smartphone phone1 = new Smartphone(1001, "iPhone", 50000, "Apple");
     Smartphone phone2 = new Smartphone(1002, "Galaxy", 30000, "Samsung");
     Smartphone phone3 = new Smartphone(1003, "Honor", 40000, "Huawei");
