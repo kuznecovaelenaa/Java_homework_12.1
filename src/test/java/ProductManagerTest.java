@@ -29,7 +29,7 @@ public class ProductManagerTest {
 
 
         Product[] actual = manager.searchBy("в");
-        Product[] expected = { book2, book3 };
+        Product[] expected = {book2, book3};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -51,7 +51,7 @@ public class ProductManagerTest {
 
 
         Product[] actual = manager.searchBy("a");
-        Product[] expected = { phone2, phone3, phone4 };
+        Product[] expected = {phone2, phone3, phone4};
 
         Assertions.assertArrayEquals(expected, actual);
     }
