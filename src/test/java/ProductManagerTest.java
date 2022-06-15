@@ -55,4 +55,67 @@ public class ProductManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
+    @Test
+    public void thirdTest() {
+        ProductRepository repository = new ProductRepository();
+        ProductManager manager = new ProductManager(repository);
+
+        Product[] actual = manager.searchBy("a");
+        Product[] expected = {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void fourthTest() {
+        ProductRepository repository = new ProductRepository();
+        ProductManager manager = new ProductManager(repository);
+        manager.add(book1);
+        manager.add(phone1);
+        manager.removeById(11);
+        manager.removeById(1001);
+
+
+        Product[] actual = manager.searchBy("a");
+        Product[] expected = {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void fifthTest() {
+        ProductRepository repository = new ProductRepository();
+        ProductManager manager = new ProductManager(repository);
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(book3);
+        manager.add(book4);
+        manager.add(phone1);
+        manager.add(phone2);
+        manager.add(phone3);
+        manager.add(phone4);
+        manager.removeById(12);
+        manager.removeById(13);
+        manager.removeById(14);
+        manager.removeById(1004);
+
+
+        Product[] actual = manager.searchBy("в");
+        Product[] expected = {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void sixthTest() {
+        ProductRepository repository = new ProductRepository();
+        ProductManager manager = new ProductManager(repository);
+        manager.add(book1);
+
+        Product[] actual = manager.searchBy("Ан");
+        Product[] expected = {book1};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
